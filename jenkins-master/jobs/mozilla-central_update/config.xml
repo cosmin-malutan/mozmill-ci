@@ -61,6 +61,17 @@
           <description>Labels of the nodes to execute the test on.</description>
           <defaultValue></defaultValue>
         </org.jvnet.jenkins.plugins.nodelabelparameter.LabelParameterDefinition>
+         <hudson.model.ChoiceParameterDefinition>
+          <name>OVERRIDE_UPDATE_CHANNEL</name>
+          <description>Modify the update-settings.ini file </description>
+          <defaultValue></defaultValue>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+              <string>--override-update-channel</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
           <name>PLATFORM</name>
           <description>The platform to run the test on.</description>
@@ -112,7 +123,7 @@
       <timeAllocated></timeAllocated>
     </hudson.plugins.xshell.XShellBuilder>
     <hudson.plugins.xshell.XShellBuilder plugin="xshell@0.9">
-      <commandLine>mozmill-env-$ENV_PLATFORM/run testrun_update --channel=$CHANNEL --target-buildid=$TARGET_BUILD_ID --repository=mozmill-tests --junit=report.xml --workspace=data --report=$REPORT_URL builds/</commandLine>
+      <commandLine>mozmill-env-$ENV_PLATFORM/run testrun_update --channel=$CHANNEL --target-buildid=$TARGET_BUILD_ID $OVERRIDE_UPDATE_CHANNEL --repository=mozmill-tests --junit=report.xml --workspace=data --report=$REPORT_URL builds/</commandLine>
       <executeFromWorkingDir>false</executeFromWorkingDir>
       <regexToKill></regexToKill>
       <timeAllocated></timeAllocated>

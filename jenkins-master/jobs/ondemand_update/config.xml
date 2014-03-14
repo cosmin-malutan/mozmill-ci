@@ -80,6 +80,17 @@
           <description>The expected build id of Firefox after the update.</description>
           <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>OVERRIDE_UPDATE_CHANNEL</name>
+          <description>Modify the update-settings.ini file </description>
+          <defaultValue></defaultValue>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string></string>
+              <string>--override-update-channel</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>VERSION</name>
           <description>The version of Firefox.</description>
@@ -112,7 +123,7 @@
       <timeAllocated></timeAllocated>
     </hudson.plugins.xshell.XShellBuilder>
     <hudson.plugins.xshell.XShellBuilder plugin="xshell@0.9">
-      <commandLine>mozmill-env-$ENV_PLATFORM/run testrun_update --target-buildid=$TARGET_BUILD_ID --channel=$CHANNEL --repository=mozmill-tests --junit=report.xml --workspace=data --report=$REPORT_URL builds/</commandLine>
+      <commandLine>mozmill-env-$ENV_PLATFORM/run testrun_update --target-buildid=$TARGET_BUILD_ID $OVERRIDE_UPDATE_CHANNEL --channel=$CHANNEL --repository=mozmill-tests --junit=report.xml --workspace=data --report=$REPORT_URL builds/</commandLine>
       <executeFromWorkingDir>false</executeFromWorkingDir>
       <regexToKill></regexToKill>
       <timeAllocated></timeAllocated>
