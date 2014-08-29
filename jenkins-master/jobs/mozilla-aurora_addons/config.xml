@@ -2,12 +2,7 @@
 <project>
   <actions/>
   <description>Execute add-ons tests for Aurora builds.</description>
-  <logRotator class="hudson.tasks.LogRotator">
-    <daysToKeep>-1</daysToKeep>
-    <numToKeep>10</numToKeep>
-    <artifactDaysToKeep>-1</artifactDaysToKeep>
-    <artifactNumToKeep>-1</artifactNumToKeep>
-  </logRotator>
+
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
@@ -118,7 +113,7 @@
       <artifacts>data/screenshots/</artifacts>
       <latestOnly>false</latestOnly>
       <allowEmptyArchive>true</allowEmptyArchive>
-    </hudson.tasks.ArtifactArchiver>
+    </hudson.tasks.ArtifactArchiver>>3<
     <hudson.tasks.junit.JUnitResultArchiver>
       <testResults>report_*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
