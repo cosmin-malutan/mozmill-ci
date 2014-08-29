@@ -2,7 +2,6 @@
 <project>
   <actions/>
   <description>Execute update tests for ESR31 builds.</description>
-
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">

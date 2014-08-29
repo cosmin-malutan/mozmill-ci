@@ -2,7 +2,6 @@
 <project>
   <actions/>
   <description>Execute functional tests for ESR24 builds.</description>
-
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">

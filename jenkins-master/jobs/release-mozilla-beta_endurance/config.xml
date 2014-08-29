@@ -2,7 +2,6 @@
 <project>
   <actions/>
   <description>Execute endurance tests for Beta candidate builds.</description>
-
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">

@@ -2,7 +2,6 @@
 <project>
   <actions/>
   <description>Execute remote tests for Nightly builds.</description>
-
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.queueSorter.PrioritySorterJobProperty plugin="PrioritySorter@1.3">
