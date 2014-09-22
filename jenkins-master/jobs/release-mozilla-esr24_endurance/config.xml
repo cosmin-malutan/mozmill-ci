@@ -3,7 +3,7 @@
   <actions/>
   <description>Execute endurance tests for ESR24 candidate builds.</description>
   <logRotator class="hudson.tasks.LogRotator">
-    <daysToKeep>3</daysToKeep>
+    <daysToKeep>-1</daysToKeep>
     <numToKeep>10</numToKeep>
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
